@@ -15,7 +15,7 @@ int waveformSawtooth(waveform* pWave, int nSamples, int nSampleRate, double freq
 	return 0;
 }
 
-int playWaveform(waveform* pWave, int nSamples, int nSampleRate)
+int playWaveform(waveform* pWave, int nSamples)
 {
 	return 0;
 }

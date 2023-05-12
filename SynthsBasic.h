@@ -30,6 +30,6 @@ I mean really, the waveform initializer function initWave initializes to 0 anywa
 /*int blankTone(waveform* pWave, int nSamples, int nSampleRate);*/
 
 
-/* * Plays the first nSamples of the waveform.
+/* * Plays the first nSamples of the waveform, if they exist.
 * */
-int playWaveform(waveform* pWave, int nSamples, int nSampleRate);
+int playWaveform(waveform* pWave, int nSamples);

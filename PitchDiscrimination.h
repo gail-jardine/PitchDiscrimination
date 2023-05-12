@@ -48,7 +48,9 @@ int genFrequencyNearby(int iFirstFreq, int iMinCentsAway, int iMaxCentsAway, dis
 /* run the process */
 /* * given 2 frequencies and a tone generating function, tests the user on whether the second tone is higher or lower.
 * returns: ToDo: error code??? void?
-* out: szTestOutput: an allocated string 
+* out: szTestOutput: an allocated string
+*	this should be written to the results log by a later function
+*	format: ToDo:
 * in/out: piStringLen: length of the string, including '\0'.
 	* as an input, the maximum allowed length of the string. 10, if a null pointer. I think this might be risky and I should just make a separate input.
 	* as an output, the length of allocated characters for szTestOutput.
@@ -70,7 +72,7 @@ void frequencyTest(char* szTestOutput, int* piStringLen, int iFirstFreq, int iSe
 int runFrequencyTests(char* szTestOutput, int* piStringLen,
 	int iLow, int iHigh, 
 	int (*fnWaveform) (waveform* pWave, int nSamples, int nSampleRate, double frequency),/*FUNCTION tone,*/
-	enum dist enDistOfCentsDifference, float fSameFreq);
+	enum dist enDistOfCentsDifference, float fSameFreq, int nTests);
 
 /* size_t: size in bytes. Do I want to use this, or an int for the number of elements in the array?
 in the case of char*, I perhaps should just use size_t. */
@@ -79,3 +81,7 @@ in the case of char*, I perhaps should just use size_t. */
 /* * top level function that explains how to proceed
 * */
 int pitchDiscriminationMain();
+
+/* other helper functions */
+/* helper function for frequencyTest */
+char printHigherOrLower(int iAbove0);
