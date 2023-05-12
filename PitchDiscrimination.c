@@ -12,9 +12,8 @@ int genFrequency(int iLow, int iHigh)
 	return 0; //ToDo: implement
 }
 
-int genFrequencyNearby(int iFirstFreq, int iMinCentsAway, int iMaxCentsAway, dist enDistribution, float fSameFreq)
+int genFrequencyNearby(int iFirstFreq, int iMinCentsAway, int iMaxCentsAway, float fSameFreq)
 {
-	if
 	return 0; //ToDo: implement
 }
 
@@ -106,9 +105,8 @@ int pitchDiscriminationMain()
 	for (int i = 0; i < nTries; i++)
 	{
 		/* randomly select frequencies */
-		dist enDistribution = distDefault; /* ToDo: reconsider whether I even want this variable */
 		int iFreqFirst = genFrequency(iLow, iHigh);
-		int iFreqSec = genFrequencyNearby(iFreqFirst, iCentsMin, iCentsHigh, enDistribution, fSameFreq);
+		int iFreqSec = genFrequencyNearby(iFreqFirst, iCentsMin, iCentsHigh, fSameFreq);
 
 		/* test the user */
 		frequencyTest(szTestOutput, piStringLen, iFirstFreq, iSecFreq, *fnWaveform);
